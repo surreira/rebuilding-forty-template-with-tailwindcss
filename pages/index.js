@@ -1,11 +1,16 @@
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function Home() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>Create Next App</title>
+        <title>TailwindCSS & Next.js Forty by HTML5 UP</title>
         <link rel="icon" href="/favicon.ico" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+          href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,300;0,600;1,300;1,600&display=swap"
+          rel="stylesheet"
+        />
       </Head>
 
       <main className="flex flex-col items-center justify-center flex-1 px-20 text-center">
