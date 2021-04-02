@@ -19,6 +19,7 @@ module.exports = {
         sans: ["Source Sans Pro", ...defaultTheme.fontFamily.sans],
       },
       letterSpacing: {
+        "forty-4": "4px",
         "forty-5": "5px",
       },
     },

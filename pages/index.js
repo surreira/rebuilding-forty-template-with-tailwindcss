@@ -1,5 +1,56 @@
 import Head from "next/head";
 
+const dogos = [
+  {
+    name: "Alvan",
+    description: "Lorem ipsum dolor sit amet",
+    image: {
+      path: "/images/alvan.jpg",
+      filename: "alvan.jpg",
+    },
+  },
+  {
+    name: "Cristian",
+    description: "Harum minima incidunt maiores!",
+    image: {
+      path: "/images/cristian.jpg",
+      filename: "cristian.jpg",
+    },
+  },
+  {
+    name: "Marliese",
+    description: "Quos pariatur, odit nemo odio reiciendis",
+    image: {
+      path: "/images/marliese.jpg",
+      filename: "marliese.jpg",
+    },
+  },
+  {
+    name: "Charles",
+    description: "Illum inventore temporibus sunt",
+    image: {
+      path: "/images/charles.jpg",
+      filename: "charles.jpg",
+    },
+  },
+  {
+    name: "Karsten",
+    description: "Quia fugiat vitae quis",
+    image: {
+      path: "/images/karsten.jpg",
+      filename: "karsten.jpg",
+    },
+  },
+  {
+    name: "Louis",
+    description: "Consectetur adipisicing hic qui dicta consequatur!",
+    image: {
+      path: "/images/louis.jpg",
+      filename: "louis.jpg",
+    },
+  },
+];
+
 export default function Home() {
   return (
     <div className="box-border">
@@ -98,8 +149,85 @@ export default function Home() {
           ></div>
         </section>
 
+        {/* grid */}
+        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5">
+          {dogos.map((dogo, index) => {
+            let width = [
+              "lg:col-span-2",
+              "lg:col-span-3",
+              "lg:col-span-3",
+              "lg:col-span-2",
+            ];
 
+            let colors = [
+              "bg-red-400",
+              "bg-yellow-400",
+              "bg-green-400",
+              "bg-blue-400",
+              "bg-indigo-400",
+              "bg-purple-400",
+              "bg-pink-400",
+              "bg-gray-400",
+            ];
+
+            return (
+              <article
+                key={dogo.name}
+                className={`h-[20vh] sm:h-[30vh] lg:h-[40vh] bg-cover bg-center relative group p-8 lg:px-12 lg:pt-16 lg:pb-8 xl:p-16 2xl:p-20 cursor-pointer ${
+                  width[index % 4]
+                }`}
+                style={{
+                  backgroundImage: `url(${dogo.image.path})`,
+                }}
+              >
+                <span
+                  aria-hidden="true"
+                  className={`absolute z-0 inset-0 transition-opacity duration-300 ease-linear bg-opacity-90 group-hover:opacity-0 ${
+                    colors[index % 8]
+                  }`}
+                ></span>
+                <div className="flex items-center w-full h-full">
+                  <header className="relative font-bold text-white w-max">
+                    <h3 className="mr-4 text-xl md:text-2xl xl:text-3xl 2xl:text-4xl">
+                      {dogo.name}
+                    </h3>
+                    <span
+                      aria-hidden="true"
+                      className="w-full h-0.5 bg-white my-2 xl:my-4 inline-block"
+                    ></span>
+                    <p className="flex items-center mr-4 text-xs leading-none uppercase md:text-sm xl:text-base">
+                      {dogo.description}
+                    </p>
+                  </header>
+                </div>
+              </article>
+            );
+          })}
+        </section>
+
+        {/* Hero post */}
+        <section className="pt-12 pb-4 bg-lucky-point xl:pb-8 2xl:pb-11 xl:pt-16 2xl:pt-24">
+          <div className="w-full px-6 mx-auto text-white md:px-12 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+            <div className="w-max 2xl:mb-11 xl:mb-8">
+              <h2 className="mr-4 text-xl font-semibold leading-none sm:text-2xl md:text-3xl xl:text-4xl 2xl:text-5xl">
+                Massa libero
+              </h2>
+              <span className="h-0.5 bg-white w-full block mt-4 xl:mt-5"></span>
+            </div>
+            <p className="">
+              Nullam et orci eu lorem consequat tincidunt vivamus et sagittis
+              libero. Mauris aliquet magna magna sed nunc rhoncus pharetra.
+              Pellentesque condimentum sem. In efficitur ligula tate urna.
+              Maecenas laoreet massa vel lacinia pellentesque lorem ipsum dolor.
+              Nullam et orci eu lorem consequat tincidunt. Vivamus et sagittis
+              libero. Mauris aliquet magna magna sed nunc rhoncus amet pharetra
+              et feugiat tempus.
             </p>
+            <a href="#" className="uppercase">
+              Get started
+            </a>
+          </div>
+        </section>
 
       </main>
     </div>
