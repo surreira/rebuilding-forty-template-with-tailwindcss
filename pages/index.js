@@ -50,6 +50,53 @@ export default function Home() {
         </nav>
       </header>
 
+      <main className="">
+        {/* banner */}
+        <section className="bg-lucky-point text-white sm:h-[50vh] xl:h-[66vh] 2xl:h-[75vh] flex justify-center flex-col pt-32 sm:pt-24 2xl:pt-28 pb-16 sm:pb-9 relative -top-11 md:-top-12 xl:-top-14 2xl:-top-16 -mb-11 md:-mb-12 xl:-mb-14 2xl:-mb-16">
+          <div className="z-10 w-full px-6 mx-auto md:px-12 sm:max-w-screen-sm md:max-w-screen-md lg:max-w-screen-lg xl:max-w-screen-xl 2xl:max-w-screen-2xl">
+            <header>
+              <h1 className="text-3xl font-bold leading-7 text-left md:text-5xl xl:text-6xl 2xl:text-7xl">
+                Hi, my name is Forty
+              </h1>
+              <span className="inline-block mt-4 md:mt-5 lg:mt-9 xl:mt-10 2xl:mt-11 mb-3 md:mb-4 lg:mb-7 xl:mb-8 2xl:mb-9 h-0.5 bg-white w-full"></span>
+            </header>
+            <div className="flex flex-col items-start lg:items-stretch lg:flex-row">
+              <p className="mb-4 text-xs font-semibold leading-5 uppercase lg:mr-4 lg:mb-0 xl:text-sm 2xl:text-base xl:leading-6 2xl:leading-7 tracking-forty-4">
+                A responsive site template designed by HTML5 UP
+                <br />
+                and released under the Creative Commons.
+              </p>
+              <button
+                className="flex items-center flex-grow-0 px-4 uppercase transition duration-200 ease-in-out border-2 border-white sm:px-6 xl:px-7 2xl:px-8 group hover:border-anakiwa"
+                type="button"
+              >
+                <span className="pr-4 text-xs font-semibold transition duration-200 ease-in-out xl:text-sm 2xl:text-lg tracking-forty-5 group-hover:text-anakiwa">
+                  Get started
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  className="transition duration-200 ease-in-out w-9 group-hover:text-anakiwa "
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div
+            className="absolute inset-x-0 bottom-0 z-0 w-full h-full bg-center bg-cover sm:bg-fixed opacity-5"
+            style={{
+              backgroundImage: "url(/images/banner.jpg)",
+            }}
+          ></div>
+        </section>
 
 
             </p>
